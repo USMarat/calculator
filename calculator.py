@@ -1,21 +1,13 @@
-a = float(input("Введите первое число: "))
-b = float(input("Введите второе число: "))
+import random
 
-print("Выберите операцию:")
-print("1 - сложение")
-print("2 - вычитание")
-print("3 - умножение")
-print("4 - деление")
+number = random.randint(1, 10)
 
-choice = input("Введите номер операции: ")
+print("Я загадал число от 1 до 10")
 
-if choice == "1":
-    print("Результат:", a + b)
-elif choice == "2":
-    print("Результат:", a - b)
-elif choice == "3":
-    print("Результат:", a * b)
-elif choice == "4":
-    print("Результат:", a / b)
+guess = int(input("Попробуй угадать: "))
+
+if guess == number:
+    print("🎉 Ты угадал!")
 else:
-    print("Неверный выбор")
+    print("❌ Не угадал")
+    print("Я загадал число:", number)
